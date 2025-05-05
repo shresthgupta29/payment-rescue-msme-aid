@@ -27,6 +27,7 @@ const Index = () => {
         <div className="container-custom flex items-center justify-between">
           <div className="flex items-center">
             <span className="text-xl md:text-2xl font-bold text-brand-blue">Payment<span className="text-brand-purple">Rescue</span></span>
+            <span className="text-xs md:text-sm text-gray-600 ml-2">by Jigyasa Labs</span>
           </div>
           <Button onClick={scrollToContact} variant="default" className="bg-brand-purple hover:bg-brand-purple/90">
             Get Help Now

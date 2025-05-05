@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Payment<span className="text-brand-purple">Rescue</span></h3>
+            <h3 className="text-xl font-bold mb-4">Payment<span className="text-brand-purple">Rescue</span> <span className="text-sm font-normal">by Jigyasa Labs</span></h3>
             <p className="text-gray-300 mb-4">
               We help MSMEs in India recover delayed payments through effective legal aid and professional support.
             </p>
@@ -21,9 +21,9 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <div className="space-y-3">
-              <a href="mailto:contact@paymentrescue.in" className="flex items-center text-gray-300 hover:text-white transition-colors">
+              <a href="mailto:contact@jigyasalabs.com" className="flex items-center text-gray-300 hover:text-white transition-colors">
                 <Mail className="w-5 h-5 mr-2" />
-                contact@paymentrescue.in
+                contact@jigyasalabs.com
               </a>
               <a href="https://wa.me/919876543210" className="flex items-center text-gray-300 hover:text-white transition-colors">
                 <MessageSquare className="w-5 h-5 mr-2" />
@@ -50,7 +50,7 @@ const Footer = () => {
         
         <div className="mt-12 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} PaymentRescue. All rights reserved.
+            © {new Date().getFullYear()} Jigyasa Labs. All rights reserved.
           </p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
