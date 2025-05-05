@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Mail, Whatsapp } from "lucide-react";
+import { Mail, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -26,7 +26,7 @@ const Footer = () => {
                 contact@paymentrescue.in
               </a>
               <a href="https://wa.me/919876543210" className="flex items-center text-gray-300 hover:text-white transition-colors">
-                <Whatsapp className="w-5 h-5 mr-2" />
+                <MessageSquare className="w-5 h-5 mr-2" />
                 +91 98765 43210
               </a>
             </div>
@@ -42,7 +42,7 @@ const Footer = () => {
                 <Mail className="w-4 h-4 mr-2" /> Email Us
               </Button>
               <Button variant="outline" className="border-brand-purple bg-brand-purple text-white hover:bg-brand-purple/80">
-                <Whatsapp className="w-4 h-4 mr-2" /> WhatsApp
+                <MessageSquare className="w-4 h-4 mr-2" /> WhatsApp
               </Button>
             </div>
           </div>

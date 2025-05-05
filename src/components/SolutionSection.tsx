@@ -1,6 +1,5 @@
-
 import React from "react";
-import { Check, FileText, Phone, HandShake } from "lucide-react";
+import { Check, FileText, Phone, Handshake, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const SolutionSection = () => {
@@ -16,7 +15,7 @@ const SolutionSection = () => {
       description: "Our team initiates formal communication with the buyer on your behalf."
     },
     {
-      icon: <HandShake className="w-6 h-6 text-white" />,
+      icon: <Handshake className="w-6 h-6 text-white" />,
       title: "Resolution & Recovery",
       description: "If required, we escalate to legal proceedings and help recover your money."
     }
