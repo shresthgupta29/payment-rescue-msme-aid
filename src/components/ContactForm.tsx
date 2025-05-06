@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -32,25 +33,50 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      console.log("Form submitted:", formData);
-      toast.success("Your case details have been submitted! We'll contact you within 24 hours.");
-      
-      // Reset form
-      setFormData({
-        msmeName: "",
-        contactPerson: "",
-        email: "",
-        phone: "",
-        buyerName: "",
-        amount: "",
-        daysPending: "",
-        message: ""
+    // EmailJS service configuration
+    // You'll need to replace these with your actual EmailJS credentials
+    const serviceId = "YOUR_EMAILJS_SERVICE_ID";
+    const templateId = "YOUR_EMAILJS_TEMPLATE_ID";
+    const userId = "YOUR_EMAILJS_USER_ID";
+    
+    // Prepare the template parameters
+    const templateParams = {
+      msme_name: formData.msmeName,
+      contact_person: formData.contactPerson,
+      email: formData.email,
+      phone: formData.phone,
+      buyer_name: formData.buyerName,
+      amount: formData.amount,
+      days_pending: formData.daysPending,
+      message: formData.message,
+      reply_to: formData.email,
+    };
+    
+    // Send the email
+    emailjs.send(serviceId, templateId, templateParams, userId)
+      .then((response) => {
+        console.log('Email sent successfully:', response);
+        toast.success("Your case details have been submitted! We'll contact you within 24 hours.");
+        
+        // Reset form
+        setFormData({
+          msmeName: "",
+          contactPerson: "",
+          email: "",
+          phone: "",
+          buyerName: "",
+          amount: "",
+          daysPending: "",
+          message: ""
+        });
+        
+        setIsSubmitting(false);
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+        toast.error("There was an error submitting your form. Please try again.");
+        setIsSubmitting(false);
       });
-      
-      setIsSubmitting(false);
-    }, 1500);
   };
 
   return (
